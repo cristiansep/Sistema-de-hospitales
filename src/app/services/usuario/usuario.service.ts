@@ -57,6 +57,25 @@ export class UsuarioService {
 
   }
 
+  loginGoogle( token: string) {
+
+    const url = URL_SERVICIOS + '/login/google';
+
+    return this.http.post(url, { token })
+      .pipe(map((resp: any) => {
+        this.guardarStorage(resp.id, resp.token, resp.usuario);
+        return true;
+      }), catchError(err => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error con la autenticación de google',
+          text: err.error.mensaje
+        });
+        return throwError(err);
+      }));
+
+  }
+
   login(usuario: Usuario, rec: boolean = false) {
 
     if (rec) {
@@ -73,7 +92,7 @@ export class UsuarioService {
       }), catchError(err => {
         Swal.fire({
           icon: 'error',
-          title: 'Error',
+          title: 'Error al intentar iniciar sesión',
           text: err.error.mensaje
         });
         return throwError(err);
