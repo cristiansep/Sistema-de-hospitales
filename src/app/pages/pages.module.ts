@@ -7,7 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 
 
-// ng2-charts
+
 
 
 import { PagesComponent } from './pages.component';
@@ -20,6 +20,11 @@ import { ProgressComponent } from './progress/progress.component';
 // temporal
 import { RxjsComponent } from './rxjs/rxjs.component';
 
+// Pipe Module
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
+import { CommonModule } from '@angular/common';
+
 
 
 @NgModule({
@@ -28,7 +33,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         HomeComponent,
         ProgressComponent,
         GraficasComponent,
-        RxjsComponent
+        RxjsComponent,
+        ProfileComponent
     ],
     exports: [
         HomeComponent,
@@ -36,9 +42,11 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         GraficasComponent
     ],
     imports: [
+        CommonModule,
         SharedModule,
         PAGES_ROUTES,
-        FormsModule
+        FormsModule,
+        PipesModule
     ]
 })
 export class PagesModule { }
