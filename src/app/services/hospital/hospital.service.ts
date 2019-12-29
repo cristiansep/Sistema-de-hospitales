@@ -34,8 +34,14 @@ export class HospitalService {
       // }));
   }
 
+  cargarTodosLosHospitales() {
+    let url = URL_SERVICIOS + '/hospital';
+
+    return this.http.get(url);
+  }
+
   obtenerHospital(id: string) {
-    let url = URL_SERVICIOS + '/hospital/=' + id;
+    let url = URL_SERVICIOS + '/hospital/' + id;
 
     return this.http.get(url)
       .pipe(map((resp: any) => resp.hospital));
