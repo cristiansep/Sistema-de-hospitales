@@ -1,11 +1,117 @@
+ <!-- Row -->
+ <div class="row">
+    <div class="col-12">
+        <h4 class="m-b-0">Nuestros profesionales</h4>
+        <p class="text-muted m-t-0 font-12">Algunos de nuestros medicos destacados.</p>
+        <div class="card-deck">
+            <div class="card"  *ngFor="let medico of medicos">
+                <img class="card-img-top img-responsive" [src]="medico.img | imagen:'medico'" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">{{medico.nombre}}</h4>
+                    <p class="card-text">{{medico.hospital.nombre}}</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+<!-- End Row -->
+
 <div class="row">
-      <div class="col-12">
-          <div class="card">
-              <div class="card-body">
 
-                  <h1>Home</h1>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body" >
 
-              </div>
-          </div>
-      </div>
-  </div>
+                <h4 class="card-title">{{visitas.usuarios.leyenda}}</h4>
+
+                <app-grafico-dona 
+                 [chartLabels]="visitas.usuarios.labels"
+                 [chartData]="visitas.usuarios.data"
+                 chartType="doughnut"
+                >
+                </app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body" >
+
+                <h4 class="card-title">{{visitas.grafico2.leyenda}}</h4>
+
+                <app-grafico-dona 
+                [chartLabels]="visitas.grafico2.labels"
+                [chartData]="visitas.grafico2.data"
+                chartType="doughnut"
+               >
+               </app-grafico-dona>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div>
+                        <h4 class="card-title"><span class="lstick"></span>Usuarios del Mes</h4></div>
+                    <div class="ml-auto">
+                        <select class="custom-select b-0">
+                            <option selected="">January 2017</option>
+                            <option value="1">February 2017</option>
+                            <option value="2">March 2017</option>
+                            <option value="3">April 2017</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-responsive m-t-20">
+                    <table class="table vm no-th-brd no-wrap pro-of-month">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Imagen</th>
+                                <th>Email</th>
+                                <th>Auth</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let usuario of usuarios">
+                                <td style="width:50px;"><span class="round"><img [src]="usuario.img | imagen" alt="user" width="50"></span></td>
+                                <td>
+                                    <h6>{{usuario.nombre}}</h6><small class="text-muted">{{usuario.role}}</small></td>
+                                <td>{{usuario.email}}</td>
+                                <td>
+                                    <label *ngIf="usuario.google" class="label label-danger btn-primary-spacing">Google</label>
+                                    <label *ngIf="!usuario.google"  class="label label-info btn-primary-spacing">Normal</label>
+                                </td>
+                            
+                            </tr>
+                          
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+   
+
+
+
+
+
+
+
+
+
+
