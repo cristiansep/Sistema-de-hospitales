@@ -16,7 +16,7 @@ import { VerificaTokenGuard } from '../services/guards/verifica-token.guard';
 
 const pagesRoutes: Routes = [
             { path: 'home', component: HomeComponent, canActivate: [VerificaTokenGuard], data: {titulo: 'Home'} },
-            { path: 'progress', component: ProgressComponent, data: {titulo: 'Progress'}  },
+            { path: 'progress', component: ProgressComponent, data: {titulo: 'Informaciónes'}  },
             { path: 'graficas', component: GraficasComponent, data: {titulo: 'Graficas'}  },
             { path: 'rxjs', component: RxjsComponent, data: {titulo: 'Rxjs'}  },
             { path: 'perfil', component: ProfileComponent, data: {titulo: 'Perfil de usuario'}},

@@ -1,9 +1,46 @@
+  <!-- .row -->
+  <div class="row">
+    <!-- .col -->
+    <div class="col-md-6 col-lg-6 col-xlg-4" *ngFor="let medico of medicos">
+        <div class="card card-body">
+            <div class="row" >
+                <div class="col-md-4 col-lg-3 text-center">
+                    <a href="app-contact-detail.html"><img [src]="medico.img | imagen:'medico'" alt="user" class="img-circle img-responsive"></a>
+                </div>
+                <div class="col-md-8 col-lg-9">
+                    <h3 class="box-title m-b-0">{{medico.nombre}}</h3> <small>Médico Especialista</small>
+                    <address>
+                        {{medico.hospital.nombre}}
+                        <br/>
+                        
+                        <br/>
+                         {{medico.horario}}
+                        <br>
+                        <abbr >Contacto:</abbr> (123) 456-7890
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col -->
+  
+</div>
+<!-- /.row -->
+
+
+
+
+
+<!-- MapBox -->
+
 <div class="row">
       <div class="col-12">
           <div class="card">
               <div class="card-body">
 
-                  <h1>Prueba 1</h1>
+                <div id="mapa-mapbox">
+
+                </div>
 
               </div>
           </div>

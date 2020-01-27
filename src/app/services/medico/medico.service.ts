@@ -25,6 +25,12 @@ export class MedicoService {
     return this.http.get(url);
   }
 
+  cargarTodosLosMedicos(desde: number = 0) {
+    let url = URL_SERVICIOS + '/medico/medicos?desde=' + desde;
+
+    return this.http.get(url);
+  }
+
   buscarMedicos( termino: string ) {
     let url = URL_SERVICIOS + '/busqueda/coleccion/medicos/' + termino;
     return this.http.get(url)

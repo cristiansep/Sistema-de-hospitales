@@ -2,6 +2,7 @@ export class Medico {
 
     constructor(
         public nombre?: string,
+        public horario?: string,
         public img?: string,
         public usuario?: string,
         public hospital?: string,

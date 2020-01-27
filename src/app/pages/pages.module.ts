@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 
 
+
 import { GraficasComponent } from './graficas/graficas.component';
 import { HomeComponent } from './home/home.component';
 import { ProgressComponent } from './progress/progress.component';
