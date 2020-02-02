@@ -13,10 +13,12 @@ import { MedicoComponent } from './medicos/medico.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { AdminGuard } from '../services/service.index';
 import { VerificaTokenGuard } from '../services/guards/verifica-token.guard';
+import { PerfilMedicoComponent} from './perfil-medico/perfil-medico.component'
 
 const pagesRoutes: Routes = [
             { path: 'home', component: HomeComponent, canActivate: [VerificaTokenGuard], data: {titulo: 'Home'} },
             { path: 'progress', component: ProgressComponent, data: {titulo: 'Informaciónes'}  },
+            { path: 'perfilmedico/:id', component: PerfilMedicoComponent, data: {titulo: 'Perfil médico'}  },
             { path: 'graficas', component: GraficasComponent, data: {titulo: 'Graficas'}  },
             { path: 'rxjs', component: RxjsComponent, data: {titulo: 'Rxjs'}  },
             { path: 'perfil', component: ProfileComponent, data: {titulo: 'Perfil de usuario'}},

@@ -32,6 +32,7 @@ import { MedicoComponent } from './medicos/medico.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
 import { GraficoLineaComponent } from '../components/grafico-linea/grafico-linea.component';
+import { PerfilMedicoComponent } from './perfil-medico/perfil-medico.component';
 
 
 
@@ -48,7 +49,8 @@ import { GraficoLineaComponent } from '../components/grafico-linea/grafico-linea
         MedicoComponent,
         BusquedaComponent,
         GraficoDonaComponent,
-        GraficoLineaComponent
+        GraficoLineaComponent,
+        PerfilMedicoComponent
     ],
     exports: [
         HomeComponent,

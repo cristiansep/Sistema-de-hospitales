@@ -5,7 +5,7 @@
         <div class="card card-body">
             <div class="row" >
                 <div class="col-md-4 col-lg-3 text-center">
-                    <a href="app-contact-detail.html"><img [src]="medico.img | imagen:'medico'" alt="user" class="img-circle img-responsive"></a>
+                    <a [routerLink]="['/perfilmedico',medico._id, lugares]"><img [src]="medico.img | imagen:'medico'" alt="user" class="img-circle img-responsive"></a>
                 </div>
                 <div class="col-md-8 col-lg-9">
                     <h3 class="box-title m-b-0">{{medico.nombre}}</h3> <small>Médico Especialista</small>
@@ -13,10 +13,10 @@
                         {{medico.hospital.nombre}}
                         <br/>
                         
-                        <br/>
+                        <!-- <br/>
                          {{medico.horario}}
                         <br>
-                        <abbr >Contacto:</abbr> (123) 456-7890
+                        <abbr >Contacto:</abbr> (123) 456-7890 -->
                     </address>
                 </div>
             </div>
@@ -33,7 +33,7 @@
 
 <!-- MapBox -->
 
-<div class="row">
+<!-- <div class="row">
       <div class="col-12">
           <div class="card">
               <div class="card-body">
@@ -45,4 +45,6 @@
               </div>
           </div>
       </div>
-  </div>
+  </div> -->
+
+

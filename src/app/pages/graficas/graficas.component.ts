@@ -10,10 +10,10 @@ export class GraficasComponent implements OnInit {
 
   graficos: any = {
     'grafico1': {
-      'labels': ['Con Frijoles', 'Con Natilla', 'Con tocino'],
+      'labels': ['Hospital Base', 'Hospital Quilacahuin', 'Hospital San juan de la costa'],
       'data': [24, 30, 46],
       'type': 'doughnut',
-      'leyenda': 'El pan se come con'
+      'leyenda': '¿Que establecimiento hospitalario presta la mejor asistencia?'
     },
     'grafico2': {
       'labels': ['Hombres', 'Mujeres'],
@@ -25,13 +25,13 @@ export class GraficasComponent implements OnInit {
       'labels': ['Si', 'No'],
       'data': [95, 5],
       'type': 'doughnut',
-      'leyenda': '¿Le dan gases los frijoles?'
+      'leyenda': '¿Le molesta mucho la espera en los hospitales?'
     },
     'grafico4': {
       'labels': ['No', 'Si'],
       'data': [85, 15],
       'type': 'doughnut',
-      'leyenda': '¿Le importa que le den gases?'
+      'leyenda': '¿Le importa la nacionanlidad del profesional que lo atiende?'
     },
   };
 

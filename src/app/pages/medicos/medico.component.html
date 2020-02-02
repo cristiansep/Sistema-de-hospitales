@@ -11,6 +11,10 @@
                             <input [(ngModel)]="medico.nombre" name="nombre" type="text" class="form-control"  placeholder="Nombre del medico" required>
                         </div>
                         <div class="form-group">
+                            <label >Horario</label>
+                            <input [(ngModel)]="medico.horario" name="horario" type="text" class="form-control"  placeholder="Horario del medico" required>
+                        </div>
+                        <div class="form-group">
                             <label >Hospital</label>
                         
                             <select (change)="cambioHospital( $event.target.value )" [(ngModel)]="medico.hospital" name="hospital" class="form-control" required>

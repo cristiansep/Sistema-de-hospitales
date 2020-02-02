@@ -1,0 +1,77 @@
+     <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-5">
+                        <div class="card">
+                            <div class="card-body" Align="center">
+                                <div class="m-t-30"> <img [src]="medico.img | imagen:'medico'" class="img-circle" width="150" />
+                                    <h4 class="card-title m-t-10">{{medico.nombre}}</h4>
+                                    <h6 class="card-subtitle">{{medico.hospital.nombre}}</h6>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">254</font></a></div>
+                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <hr> </div>
+                            <div class="card-body"> 
+                                <small class="text-muted">Correo Electronico</small>
+                                <h6>medicos@saludchile.com</h6> 
+                                <small class="text-muted p-t-30 db">Telefono</small>
+                                <h6>+91 654 784 547</h6> 
+                                <small class="text-muted p-t-30 db">Horario</small>
+                                <h6>{{medico.horario}}</h6> 
+                               
+                                <hr>
+                                <small class="text-muted p-t-30 db">Redes Sociales</small>
+                                <br/>
+                                <a href="http://facebook.com" class="btn btn-circle btn-secondary"><i class="fa fa-facebook"></i></a>
+                                <a href="http://twitter.com" class="btn btn-circle btn-secondary"><i class="fa fa-twitter"></i></a>
+                                <a href="http://youtube.com" class="btn btn-circle btn-secondary"><i class="fa fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
+                        <div class="card">
+                                <!--second tab-->
+                                <div class="tab-pane" id="profile" role="tabpanel">
+                                    <div class="card-body">
+                                        <div class="text-right">
+                                            <button routerLink="/progress" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                                                <i class="fa fa-arrow-circle-left"></i>
+                                                Volver
+                                            </button>
+                                          </div>
+                                        <div class="row">
+                                         
+                                            <div class="col-md-3 col-xs-6"> <strong>Ubicación</strong>
+                                              
+                                                <p class="text-muted">{{medico.hospital.nombre}}</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div id="mapa-mapbox2"></div>
+                                      
+                                    </div>
+                                </div>
+                            
+                           
+                                </div>
+                         
+                        </div>
+                    </div>
+                    <!-- Column -->
+                
+          
+
+
+
+
+
+             
